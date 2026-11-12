@@ -1,0 +1,301 @@
+[gd_scene format=3 uid="uid://b2ythbsh1dbrl"]
+
+[ext_resource type="Script" uid="uid://s5j1ds0xv460" path="res://Scripts/defeated.gd" id="1_akxo7"]
+[ext_resource type="Texture2D" uid="uid://ncgxpfpgac1" path="res://background died.jpg" id="1_yfebc"]
+[ext_resource type="FontFile" uid="uid://b8plwnnlecdob" path="res://Fonts/Batolah.otf" id="2_akxo7"]
+[ext_resource type="FontFile" uid="uid://d36gylhvvevp3" path="res://Fonts/Blueberry Personal Use Only.ttf" id="3_68a0p"]
+[ext_resource type="FontFile" uid="uid://bjnasytw608yg" path="res://Fonts/Bing Boss.otf" id="4_w1657"]
+[ext_resource type="Script" uid="uid://b6x20ama8x716" path="res://Scripts/audio_control.gd" id="6_ssowm"]
+[ext_resource type="Script" uid="uid://b5njmanow4kqg" path="res://Scripts/sfx_control.gd" id="7_vmfe7"]
+[ext_resource type="AudioStream" uid="uid://chyt133ai1keq" path="res://Audio/viacheslavstarostin-game-gaming-video-game-music-471936.mp3" id="8_ssowm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_len14"]
+texture = ExtResource("1_yfebc")
+modulate_color = Color(0.67240465, 0.5484236, 0.62642854, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tm5ly"]
+bg_color = Color(1, 0.99, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yfebc"]
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akxo7"]
+bg_color = Color(0.09112144, 0.09112146, 0.09112144, 0.78431374)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ka3l1"]
+bg_color = Color(0.08, 0.08, 0.08, 0.54509807)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hgjwc"]
+bg_color = Color(1, 0.99, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mqvjc"]
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_huwpu"]
+bg_color = Color(0.09, 0.09, 0.09, 0.8862745)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_f0uth"]
+color = Color(1, 1, 1, 1)
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_2aksl"]
+color = Color(0.33919996, 0.39434662, 0.64, 1)
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_wthep"]
+color = Color(1, 1, 1, 1)
+thickness = 6
+
+[node name="Control" type="Control" unique_id=1888801576]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_akxo7")
+
+[node name="Background" type="Panel" parent="." unique_id=794518709]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_len14")
+
+[node name="Label" type="Label" parent="." unique_id=509530158]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -173.0
+offset_top = 62.0
+offset_right = 174.0
+offset_bottom = 156.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_akxo7")
+theme_override_font_sizes/font_size = 80
+text = "Defeated!"
+
+[node name="DefeatedButtons" type="VBoxContainer" parent="." unique_id=1393375795]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -495.0
+offset_top = -117.0
+offset_right = -160.0
+offset_bottom = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+
+[node name="Retry" type="Button" parent="DefeatedButtons" unique_id=1452984201]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 7
+theme_override_fonts/font = ExtResource("2_akxo7")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_tm5ly")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yfebc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_akxo7")
+text = "Retry"
+
+[node name="Menu" type="Button" parent="DefeatedButtons" unique_id=1377140985]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 7
+theme_override_fonts/font = ExtResource("2_akxo7")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_tm5ly")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yfebc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_akxo7")
+text = "Menu"
+
+[node name="Exit" type="Button" parent="DefeatedButtons" unique_id=1675817824]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 7
+theme_override_fonts/font = ExtResource("2_akxo7")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_tm5ly")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yfebc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_akxo7")
+text = "Exit"
+
+[node name="Settings" type="Panel" parent="." unique_id=1477646030]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -506.0
+offset_top = -118.0
+offset_right = 6.0
+offset_bottom = 257.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ka3l1")
+
+[node name="Optionstitel" type="Label" parent="Settings" unique_id=1224706877]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -254.0
+offset_right = 254.0
+offset_bottom = 79.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_w1657")
+theme_override_font_sizes/font_size = 50
+text = "Options"
+horizontal_alignment = 1
+
+[node name="Back" type="Button" parent="Settings" unique_id=1074463030]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -136.0
+offset_top = -69.0
+offset_right = 113.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 7
+theme_override_fonts/font = ExtResource("3_68a0p")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_hgjwc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mqvjc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_huwpu")
+text = "Back
+"
+
+[node name="Music" type="Label" parent="Settings" unique_id=827319002]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.16800001
+anchor_top = 0.28500003
+anchor_right = 0.16800001
+anchor_bottom = 0.28500003
+offset_left = -46.016006
+offset_top = -17.875008
+offset_right = 45.983994
+offset_bottom = 18.124992
+theme_override_fonts/font = ExtResource("3_68a0p")
+theme_override_font_sizes/font_size = 30
+text = "Music"
+
+[node name="MusicControl" type="HSlider" parent="Settings" unique_id=2116199082]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.41300002
+anchor_right = 0.5
+anchor_bottom = 0.41300002
+offset_left = -216.0
+offset_top = -34.875
+offset_right = 228.0
+offset_bottom = 18.125
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_f0uth")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_2aksl")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_2aksl")
+max_value = 1.0
+step = 0.05
+value = 0.5
+script = ExtResource("6_ssowm")
+audio_bus_name = "Music"
+
+[node name="SFXControl" type="HSlider" parent="Settings" unique_id=1385937984]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 38.0
+offset_top = 215.0
+offset_right = -21.0
+offset_bottom = 277.0
+grow_horizontal = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_wthep")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_2aksl")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_2aksl")
+max_value = 1.0
+step = 0.05
+value = 0.5
+script = ExtResource("7_vmfe7")
+audio_bus_name = "SFX"
+
+[node name="Label" type="Label" parent="Settings" unique_id=1484927634]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.136
+anchor_top = 0.573
+anchor_right = 0.136
+anchor_bottom = 0.573
+offset_left = -25.632004
+offset_top = -17.875
+offset_right = 25.367996
+offset_bottom = 18.125
+theme_override_fonts/font = ExtResource("3_68a0p")
+theme_override_font_sizes/font_size = 30
+text = "SFX"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=189785504]
+stream = ExtResource("8_ssowm")
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="DefeatedButtons/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="DefeatedButtons/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="DefeatedButtons/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Settings/Back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="Settings/MusicControl" to="Settings/MusicControl" method="_on_value_changed"]
+[connection signal="value_changed" from="Settings/SFXControl" to="Settings/SFXControl" method="_on_value_changed"]

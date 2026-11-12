@@ -25,7 +25,6 @@ Supabase="*uid://b135l6rlb6egh"
 
 [display]
 
-window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
