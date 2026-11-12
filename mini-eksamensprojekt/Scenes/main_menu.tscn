@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://clfsvvivpn376"]
 
 [ext_resource type="Texture2D" uid="uid://b478rgq0qat5r" path="res://Backgorund placeholder.jpg" id="1_n45e2"]
-[ext_resource type="FontFile" uid="uid://6a88w660wkmp" path="res://The Duke of Prunes.ttf" id="2_opfnp"]
-[ext_resource type="FontFile" uid="uid://b8plwnnlecdob" path="res://Scenes/Batolah.otf" id="3_cp0ys"]
-[ext_resource type="FontFile" uid="uid://eo4g7oqa5rsq" path="res://Lolicandy.otf" id="4_yhxw7"]
-[ext_resource type="FontFile" uid="uid://d36gylhvvevp3" path="res://Blueberry Personal Use Only.ttf" id="5_trj04"]
+[ext_resource type="Script" uid="uid://c8qpxgt21cxb" path="res://Scripts/main_menu.gd" id="1_opfnp"]
+[ext_resource type="FontFile" uid="uid://6a88w660wkmp" path="res://Fonts/The Duke of Prunes.ttf" id="2_opfnp"]
+[ext_resource type="FontFile" uid="uid://b8plwnnlecdob" path="res://Fonts/Batolah.otf" id="3_cp0ys"]
+[ext_resource type="FontFile" uid="uid://eo4g7oqa5rsq" path="res://Fonts/Lolicandy.otf" id="4_yhxw7"]
+[ext_resource type="FontFile" uid="uid://d36gylhvvevp3" path="res://Fonts/Blueberry Personal Use Only.ttf" id="5_trj04"]
+[ext_resource type="FontFile" uid="uid://bjnasytw608yg" path="res://Fonts/Bing Boss.otf" id="7_cp0ys"]
+[ext_resource type="AudioStream" uid="uid://chyt133ai1keq" path="res://Audio/viacheslavstarostin-game-gaming-video-game-music-471936.mp3" id="8_yhxw7"]
+[ext_resource type="Script" uid="uid://b6x20ama8x716" path="res://Scripts/audio_control.gd" id="9_trj04"]
+[ext_resource type="Script" uid="uid://b5njmanow4kqg" path="res://Scripts/sfx_control.gd" id="10_16hvj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_len14"]
 texture = ExtResource("1_n45e2")
@@ -57,6 +62,25 @@ corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16hvj"]
+bg_color = Color(0.08, 0.08, 0.08, 0.54509807)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ok5a4"]
+color = Color(1, 1, 1, 1)
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_6a1xx"]
+color = Color(0.33919996, 0.39434662, 0.64, 1)
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_len14"]
+color = Color(1, 1, 1, 1)
+thickness = 6
+
 [node name="Control" type="Control" unique_id=1247745113]
 layout_mode = 3
 anchors_preset = 15
@@ -64,8 +88,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_opfnp")
 
-[node name="Panel" type="Panel" parent="." unique_id=1638291661]
+[node name="Background" type="Panel" parent="." unique_id=1638291661]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -74,7 +100,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_len14")
 
-[node name="Label" type="Label" parent="." unique_id=1700927483]
+[node name="Title" type="Label" parent="." unique_id=1700927483]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -93,7 +120,13 @@ theme_override_fonts/font = ExtResource("2_opfnp")
 theme_override_font_sizes/font_size = 50
 text = "DEFEAT METTE"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1154744650]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=147377119]
+stream = ExtResource("8_yhxw7")
+volume_db = 1.0
+autoplay = true
+bus = &"Music"
+
+[node name="Menu buttons" type="VBoxContainer" parent="." unique_id=1154744650]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -108,7 +141,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 18
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=1566235880]
+[node name="Start game" type="Button" parent="Menu buttons" unique_id=1566235880]
+texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -120,7 +154,8 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_n45e2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_yhxw7")
 text = "Start game "
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=52231595]
+[node name="Options" type="Button" parent="Menu buttons" unique_id=52231595]
+texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -133,7 +168,8 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_trj04")
 text = "Options
 "
 
-[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1240351831]
+[node name="Exit" type="Button" parent="Menu buttons" unique_id=1240351831]
+texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -145,3 +181,136 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_cp0ys")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
 text = "Exit
 "
+
+[node name="Settings" type="Panel" parent="." unique_id=25322409]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -506.0
+offset_top = -118.0
+offset_right = 6.0
+offset_bottom = 257.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_16hvj")
+
+[node name="Optionstitel" type="Label" parent="Settings" unique_id=1065375386]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -254.0
+offset_right = 254.0
+offset_bottom = 79.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("7_cp0ys")
+theme_override_font_sizes/font_size = 50
+text = "Options"
+horizontal_alignment = 1
+
+[node name="Back" type="Button" parent="Settings" unique_id=768287502]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -136.0
+offset_top = -69.0
+offset_right = 113.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 7
+theme_override_fonts/font = ExtResource("5_trj04")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_len14")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cp0ys")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t1dhk")
+text = "Back
+"
+
+[node name="Music" type="Label" parent="Settings" unique_id=1953131749]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.16800001
+anchor_top = 0.28500003
+anchor_right = 0.16800001
+anchor_bottom = 0.28500003
+offset_left = -46.016006
+offset_top = -17.875008
+offset_right = 45.983994
+offset_bottom = 18.124992
+theme_override_fonts/font = ExtResource("5_trj04")
+theme_override_font_sizes/font_size = 30
+text = "Music"
+
+[node name="MusicControl" type="HSlider" parent="Settings" unique_id=1538679739]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.41300002
+anchor_right = 0.5
+anchor_bottom = 0.41300002
+offset_left = -216.0
+offset_top = -34.875
+offset_right = 228.0
+offset_bottom = 18.125
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_ok5a4")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_6a1xx")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_6a1xx")
+max_value = 1.0
+step = 0.05
+value = 0.5
+script = ExtResource("9_trj04")
+audio_bus_name = "Music"
+
+[node name="SFXControl" type="HSlider" parent="Settings" unique_id=542117792]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 38.0
+offset_top = 215.0
+offset_right = -21.0
+offset_bottom = 277.0
+grow_horizontal = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_len14")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_6a1xx")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_6a1xx")
+max_value = 1.0
+step = 0.05
+value = 0.5
+script = ExtResource("10_16hvj")
+audio_bus_name = "SFX"
+
+[node name="Label" type="Label" parent="Settings" unique_id=218149107]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.136
+anchor_top = 0.573
+anchor_right = 0.136
+anchor_bottom = 0.573
+offset_left = -25.632004
+offset_top = -17.875
+offset_right = 25.367996
+offset_bottom = 18.125
+theme_override_fonts/font = ExtResource("5_trj04")
+theme_override_font_sizes/font_size = 30
+text = "SFX"
+
+[connection signal="pressed" from="Menu buttons/Start game" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="Menu buttons/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Menu buttons/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Settings/Back" to="." method="_on_back_options_pressed"]
+[connection signal="value_changed" from="Settings/MusicControl" to="Settings/MusicControl" method="_on_value_changed"]
+[connection signal="value_changed" from="Settings/SFXControl" to="Settings/SFXControl" method="_on_value_changed"]
