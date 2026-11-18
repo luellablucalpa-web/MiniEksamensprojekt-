@@ -29,7 +29,9 @@ Dialogic="*uid://ds2q0uclmolvu"
 directories/dch_directory={
 "Main Character ": "res://Dialogic/Main Character .dch"
 }
-directories/dtl_directory={}
+directories/dtl_directory={
+"timeline": "res://Dialogic/timeline.dtl"
+}
 layout/style_directory={}
 glossary/default_case_sensitive=true
 layout/style_list=[]
@@ -42,7 +44,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/supabase/plugin.cfg")
+enabled=PackedStringArray("res://addons/supabase/plugin.cfg")
 
 [input]
 
