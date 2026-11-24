@@ -1,7 +1,7 @@
 extends Control
 
 var hp = 100
-var enemy_hp = 100
+var enemy_hp = 200
 
 # spørgsmålenmenene og svar og hvilket svar der er rigtigt (0 = første = A)
 var questions = [
@@ -22,8 +22,9 @@ func _ready():
 	update_hp()
 
 func update_hp():
+	$EnemyInfo/HPBar.max_value = 200
 	$EnemyInfo/HPBar.value = enemy_hp
-	$EnemyInfo/HPLabel.text = str(enemy_hp) + " / 100"
+	$EnemyInfo/HPLabel.text = str(enemy_hp) + " / 200"
 	$PlayerInfo/HPBar.value = hp
 	$PlayerInfo/HPLabel.text = str(hp) + " / 100"
 

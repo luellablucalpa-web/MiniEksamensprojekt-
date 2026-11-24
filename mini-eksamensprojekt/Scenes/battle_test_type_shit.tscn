@@ -153,7 +153,7 @@ offset_right = 360.0
 offset_bottom = 50.0
 theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
 theme_override_font_sizes/font_size = 29
-text = "Mette fart"
+text = "METTE FART"
 
 [node name="HPBar" type="ProgressBar" parent="Battle/EnemyInfo" unique_id=1305330232]
 layout_mode = 0
@@ -184,7 +184,7 @@ offset_right = 441.0
 offset_bottom = 50.0
 theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
 theme_override_font_sizes/font_size = 25
-text = "100 / 100"
+text = "200 / 200"
 horizontal_alignment = 2
 
 [node name="PlayerInfo" type="Panel" parent="Battle" unique_id=1869732213]
