@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://d3shrvpvnmft2"]
+
+[ext_resource type="Texture2D" uid="uid://ind0ddxlncn4" path="res://icon.svg" id="1_ip7xm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oxp8w"]
+bg_color = Color(0.7796378, 0.6485221, 0.2992569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7sfm4"]
+bg_color = Color(9.1448425e-07, 0.780598, 0.13497266, 1)
+
+[node name="Battle" type="Control" unique_id=533207701]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=303144826]
+layout_mode = 0
+offset_right = 1157.0
+offset_bottom = 641.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1339982313]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.671
+anchor_top = 0.032
+anchor_right = 0.89100003
+anchor_bottom = 0.397
+offset_left = 0.0079956055
+offset_top = 0.26399994
+offset_right = -0.43200684
+offset_bottom = -0.25601196
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer" unique_id=670710562]
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_oxp8w")
+theme_override_styles/fill = SubResource("StyleBoxFlat_7sfm4")
+value = 100.0
+
+[node name="Enemy" type="TextureRect" parent="VBoxContainer" unique_id=151154321]
+layout_mode = 2
+texture = ExtResource("1_ip7xm")
+stretch_mode = 2
