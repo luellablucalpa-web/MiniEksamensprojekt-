@@ -3,10 +3,11 @@ extends Control
 var hp = 100
 var enemy_hp = 100
 
-# spørgsmålenmenene svar og hvilket svar der er rigtigt (0 = første)
+# spørgsmålenmenene og svar og hvilket svar der er rigtigt (0 = første = A)
 var questions = [
 	["Did Mu fart?", "Yes", "No", "", "", 0],
 	["Did Simon fart?", "Yes", "No", "Probably", "", 2],
+	["is luella a fart smella?", "Yes", "No", "ewww", "nah cus cus", 0]
 ]
 var q = []
 
