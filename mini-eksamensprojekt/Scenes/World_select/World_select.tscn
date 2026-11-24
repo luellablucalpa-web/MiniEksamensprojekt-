@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://c5bdbklg6nekp"]
+
+[ext_resource type="Script" uid="uid://bgftimcjfdnx" path="res://Scenes/World_select/world_select.gd" id="1_0h6ij"]
+[ext_resource type="PackedScene" uid="uid://cuii472q5r5ib" path="res://Scenes/World_select/world_icon.tscn" id="2_qr5av"]
+[ext_resource type="PackedScene" uid="uid://b0to8pu3lyxel" path="res://Scenes/World_select/player_icon.tscn" id="3_084e4"]
+
+[node name="WorldSelect" type="Control" unique_id=1447822051]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0h6ij")
+
+[node name="WorldIcon" parent="." unique_id=1756826384 instance=ExtResource("2_qr5av")]
+layout_mode = 0
+
+[node name="WorldIcon2" parent="." unique_id=2075295283 instance=ExtResource("2_qr5av")]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 64.0
+offset_right = 193.0
+offset_bottom = 128.0
+world_index = 2
+
+[node name="WorldIcon3" parent="." unique_id=792950816 instance=ExtResource("2_qr5av")]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 105.0
+offset_right = 332.0
+offset_bottom = 169.0
+world_index = 3
+
+[node name="WorldIcon4" parent="." unique_id=1346709969 instance=ExtResource("2_qr5av")]
+layout_mode = 0
+offset_left = 387.0
+offset_top = 28.0
+offset_right = 451.0
+offset_bottom = 92.0
+world_index = 4
+
+[node name="WorldIcon5" parent="." unique_id=1400659550 instance=ExtResource("2_qr5av")]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 110.0
+offset_right = 542.0
+offset_bottom = 174.0
+world_index = 5
+
+[node name="PlayerIcon" parent="." unique_id=1101685857 instance=ExtResource("3_084e4")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 128.0
+offset_right = 64.0
+offset_bottom = 192.0
