@@ -122,7 +122,7 @@ text = "DEFEAT METTE"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=147377119]
 stream = ExtResource("8_yhxw7")
-volume_db = 1.0
+volume_db = 0.5
 autoplay = true
 bus = &"Music"
 
