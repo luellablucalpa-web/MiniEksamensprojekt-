@@ -7,7 +7,8 @@ var enemy_hp = 200
 var questions = [
 	["Did Mu fart?", "Yes", "No", "", "", 0],
 	["Did Simon fart?", "Yes", "No", "Probably", "", 2],
-	["is luella a fart smella?", "Yes", "No", "ewww", "nah cus cus", 0]
+	["is luella a fart smella?", "Yes", "No", "ewww", "nah cus cus", 0],
+	["jack is the coolest guy ever", "Yes", "No", "debatable", "", 0]
 ]
 var q = []
 

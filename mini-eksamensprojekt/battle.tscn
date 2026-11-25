@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://dw1lucmmad2oa"]
+[gd_scene format=3 uid="uid://bja3f248ocyr1"]
 
-[ext_resource type="Texture2D" uid="uid://ind0ddxlncn4" path="res://icon.svg" id="1_w7k78"]
+[ext_resource type="Texture2D" uid="uid://ind0ddxlncn4" path="res://icon.svg" id="1_ip7xm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oxp8w"]
 bg_color = Color(0.7796378, 0.6485221, 0.2992569, 1)
@@ -41,5 +41,5 @@ value = 100.0
 
 [node name="Enemy" type="TextureRect" parent="VBoxContainer" unique_id=151154321]
 layout_mode = 2
-texture = ExtResource("1_w7k78")
+texture = ExtResource("1_ip7xm")
 stretch_mode = 2
