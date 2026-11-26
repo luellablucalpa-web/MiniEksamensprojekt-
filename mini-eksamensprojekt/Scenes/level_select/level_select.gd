@@ -2,7 +2,7 @@ extends Control
 class_name LevelSelect
 
 @onready var current_level: LevelIcon = $"1"
-var current_world: int = 0
+var parent_world_select: Node
 
 
 func _ready():
@@ -23,5 +23,10 @@ func _input(event):
 		current_level = current_level.next_level_down
 		$PlayerIcon.global_position = current_level.global_position
 		
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://Scenes/World_select/world_select.tscn")
 		
+	if event.is_action_pressed("ui_accept"):
+		if current_level.next_scene_path:
+			get_tree().change_scene_to_file(current_level.next_scene_path)
 		

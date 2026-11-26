@@ -18,6 +18,8 @@ func _input(event):
 		$PlayerIcon.global_position = worlds[current_world].global_position
 		
 	if event.is_action_pressed("ui_accept"):
-		var scene = worlds[current_world].level_select_scene
-		if scene:
-			get_tree().change_scene_to_packed(scene)
+		if worlds[current_world].level_select_scene:
+			worlds[current_world].level_select_scene.parent_world_select = self
+			get_tree().get_root().add_child(worlds[current_world].level_select_scene)
+			get_tree().current_scene = worlds[current_world].level_select_scene
+			get_tree().get_root().remove_child(self)
