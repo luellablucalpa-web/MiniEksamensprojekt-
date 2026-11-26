@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dcpemeou1f6sf" path="res://Scripts/battle.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://ind0ddxlncn4" path="res://icon.svg" id="2_icon"]
+[ext_resource type="FontFile" uid="uid://dyr2wead6axtj" path="res://Fonts/Minecraft.ttf" id="3_0rqxs"]
 
 [sub_resource type="StyleBoxFlat" id="InfoBox"]
 bg_color = Color(0.93, 0.93, 0.9, 1)
@@ -152,6 +153,7 @@ offset_top = 14.0
 offset_right = 360.0
 offset_bottom = 50.0
 theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_fonts/font = ExtResource("3_0rqxs")
 theme_override_font_sizes/font_size = 29
 text = "METTE FART"
 
@@ -173,6 +175,7 @@ offset_top = 58.0
 offset_right = 104.0
 offset_bottom = 90.0
 theme_override_colors/font_color = Color(0.9, 0.55, 0, 1)
+theme_override_fonts/font = ExtResource("3_0rqxs")
 theme_override_font_sizes/font_size = 22
 text = "HP"
 
@@ -183,6 +186,7 @@ offset_top = 14.0
 offset_right = 441.0
 offset_bottom = 50.0
 theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_fonts/font = ExtResource("3_0rqxs")
 theme_override_font_sizes/font_size = 25
 text = "200 / 200"
 horizontal_alignment = 2
@@ -202,6 +206,7 @@ offset_top = 14.0
 offset_right = 360.0
 offset_bottom = 50.0
 theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_fonts/font = ExtResource("3_0rqxs")
 theme_override_font_sizes/font_size = 29
 text = "YOU"
 
@@ -223,6 +228,7 @@ offset_top = 58.0
 offset_right = 104.0
 offset_bottom = 90.0
 theme_override_colors/font_color = Color(0.9, 0.55, 0, 1)
+theme_override_fonts/font = ExtResource("3_0rqxs")
 theme_override_font_sizes/font_size = 22
 text = "HP"
 
@@ -233,6 +239,7 @@ offset_top = 90.0
 offset_right = 441.0
 offset_bottom = 126.0
 theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_fonts/font = ExtResource("3_0rqxs")
 theme_override_font_sizes/font_size = 25
 text = "100 / 100"
 horizontal_alignment = 2
@@ -260,6 +267,7 @@ offset_top = 18.0
 offset_right = 495.0
 offset_bottom = 153.0
 theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_fonts/font = ExtResource("3_0rqxs")
 theme_override_font_sizes/font_size = 29
 text = "What will you do?"
 autowrap_mode = 3
@@ -275,11 +283,12 @@ offset_left = 594.0
 offset_top = 468.0
 offset_right = 837.0
 offset_bottom = 531.0
+theme_override_fonts/font = ExtResource("3_0rqxs")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("FightStyle")
 theme_override_styles/pressed = SubResource("FightStyle")
 theme_override_styles/hover = SubResource("FightStyle")
-text = "FIGHT"
+text = "Attack"
 
 [node name="BagButton" type="Button" parent="Battle/Menu" unique_id=1670843302]
 layout_mode = 0
@@ -287,11 +296,12 @@ offset_left = 873.0
 offset_top = 468.0
 offset_right = 1116.0
 offset_bottom = 531.0
+theme_override_fonts/font = ExtResource("3_0rqxs")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("BagStyle")
 theme_override_styles/pressed = SubResource("BagStyle")
 theme_override_styles/hover = SubResource("BagStyle")
-text = "BAG"
+text = "Bag"
 
 [node name="FartButton" type="Button" parent="Battle/Menu" unique_id=2082006625]
 layout_mode = 0
@@ -299,6 +309,7 @@ offset_left = 594.0
 offset_top = 549.0
 offset_right = 837.0
 offset_bottom = 612.0
+theme_override_fonts/font = ExtResource("3_0rqxs")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("PokeStyle")
 theme_override_styles/pressed = SubResource("PokeStyle")
@@ -313,6 +324,7 @@ offset_left = 873.0
 offset_top = 549.0
 offset_right = 1116.0
 offset_bottom = 612.0
+theme_override_fonts/font = ExtResource("3_0rqxs")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("RunStyle")
 theme_override_styles/pressed = SubResource("RunStyle")
@@ -336,6 +348,7 @@ offset_top = 18.0
 offset_right = 873.0
 offset_bottom = 126.0
 theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_fonts/font = ExtResource("3_0rqxs")
 theme_override_font_sizes/font_size = 29
 text = "Question"
 horizontal_alignment = 1
@@ -348,6 +361,7 @@ offset_left = 36.0
 offset_top = 153.0
 offset_right = 432.0
 offset_bottom = 243.0
+theme_override_fonts/font = ExtResource("3_0rqxs")
 theme_override_font_sizes/font_size = 25
 text = "Answer A"
 
@@ -357,6 +371,7 @@ offset_left = 468.0
 offset_top = 153.0
 offset_right = 864.0
 offset_bottom = 243.0
+theme_override_fonts/font = ExtResource("3_0rqxs")
 theme_override_font_sizes/font_size = 25
 text = "Answer B"
 
@@ -366,6 +381,7 @@ offset_left = 36.0
 offset_top = 261.0
 offset_right = 432.0
 offset_bottom = 351.0
+theme_override_fonts/font = ExtResource("3_0rqxs")
 theme_override_font_sizes/font_size = 25
 text = "Answer C"
 
@@ -375,5 +391,6 @@ offset_left = 468.0
 offset_top = 261.0
 offset_right = 864.0
 offset_bottom = 351.0
+theme_override_fonts/font = ExtResource("3_0rqxs")
 theme_override_font_sizes/font_size = 25
 text = "Answer D"

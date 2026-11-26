@@ -1,0 +1,407 @@
+[gd_scene format=3 uid="uid://bj0o6ryp4b6b"]
+
+[ext_resource type="Script" uid="uid://dcpemeou1f6sf" path="res://Scripts/battle.gd" id="1_bt2ww"]
+[ext_resource type="Texture2D" uid="uid://ind0ddxlncn4" path="res://icon.svg" id="2_l5eg2"]
+[ext_resource type="FontFile" uid="uid://dyr2wead6axtj" path="res://Fonts/Minecraft.ttf" id="3_q2wej"]
+
+[sub_resource type="StyleBoxFlat" id="InfoBox"]
+bg_color = Color(0.93, 0.93, 0.9, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.2, 0.2, 0.25, 1)
+corner_radius_top_left = 12
+corner_radius_bottom_right = 12
+
+[sub_resource type="StyleBoxFlat" id="HPBack"]
+bg_color = Color(0.25, 0.25, 0.25, 1)
+
+[sub_resource type="StyleBoxFlat" id="HPFill"]
+bg_color = Color(0.2, 0.85, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="BottomBox"]
+bg_color = Color(0.35, 0.35, 0.4, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.15, 0.15, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="MessageStyle"]
+bg_color = Color(0.97, 0.97, 0.97, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.2, 0.5, 0.45, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="FightStyle"]
+bg_color = Color(0.95, 0.45, 0.5, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.6, 0.1, 0.15, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="BagStyle"]
+bg_color = Color(1, 0.65, 0.1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.6, 0.35, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="PokeStyle"]
+bg_color = Color(0.2, 0.7, 0.2, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.05, 0.35, 0.05, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="RunStyle"]
+bg_color = Color(0.15, 0.55, 0.95, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.05, 0.25, 0.55, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Battle test type shit" type="Node2D" unique_id=975150450]
+
+[node name="Battle" type="Control" parent="." unique_id=1967062552]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_bt2ww")
+
+[node name="Background" type="ColorRect" parent="Battle" unique_id=405631814]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.55, 0.85, 0.6, 1)
+
+[node name="EnemyPlatform" type="ColorRect" parent="Battle" unique_id=1489820250]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 207.0
+offset_right = 1098.0
+offset_bottom = 270.0
+color = Color(0.35, 0.7, 0.4, 1)
+
+[node name="PlayerPlatform" type="ColorRect" parent="Battle" unique_id=524244693]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 378.0
+offset_right = 504.0
+offset_bottom = 441.0
+color = Color(0.35, 0.7, 0.4, 1)
+
+[node name="EnemySprite" type="TextureRect" parent="Battle" unique_id=824358510]
+layout_mode = 0
+offset_left = 774.0
+offset_top = 54.0
+offset_right = 954.0
+offset_bottom = 234.0
+texture = ExtResource("2_l5eg2")
+expand_mode = 1
+
+[node name="PlayerSprite" type="TextureRect" parent="Battle" unique_id=56022637]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 207.0
+offset_right = 378.0
+offset_bottom = 441.0
+texture = ExtResource("2_l5eg2")
+expand_mode = 1
+flip_h = true
+
+[node name="EnemyInfo" type="Panel" parent="Battle" unique_id=1011323840]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 27.0
+offset_right = 504.0
+offset_bottom = 135.0
+theme_override_styles/panel = SubResource("InfoBox")
+
+[node name="NameLabel" type="Label" parent="Battle/EnemyInfo" unique_id=802000095]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 14.0
+offset_right = 360.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_fonts/font = ExtResource("3_q2wej")
+theme_override_font_sizes/font_size = 29
+text = "Pelle Frogsted"
+
+[node name="NameLabel2" type="Label" parent="Battle/EnemyInfo" unique_id=744015920]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 41.0
+offset_right = 396.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0.101960786, 0.101960786, 0.101960786, 0.5803922)
+theme_override_fonts/font = ExtResource("3_q2wej")
+theme_override_font_sizes/font_size = 18
+text = "Demokratisk socialisme"
+
+[node name="HPBar" type="ProgressBar" parent="Battle/EnemyInfo" unique_id=1305330232]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 63.0
+offset_right = 441.0
+offset_bottom = 86.0
+theme_override_styles/background = SubResource("HPBack")
+theme_override_styles/fill = SubResource("HPFill")
+value = 100.0
+show_percentage = false
+
+[node name="HPText" type="Label" parent="Battle/EnemyInfo" unique_id=1261154371]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 58.0
+offset_right = 104.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0.9, 0.55, 0, 1)
+theme_override_fonts/font = ExtResource("3_q2wej")
+theme_override_font_sizes/font_size = 22
+text = "HP"
+
+[node name="HPLabel" type="Label" parent="Battle/EnemyInfo" unique_id=496199689]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 14.0
+offset_right = 441.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_fonts/font = ExtResource("3_q2wej")
+theme_override_font_sizes/font_size = 25
+text = "200 / 200"
+horizontal_alignment = 2
+
+[node name="PlayerInfo" type="Panel" parent="Battle" unique_id=1869732213]
+layout_mode = 0
+offset_left = 648.0
+offset_top = 288.0
+offset_right = 1116.0
+offset_bottom = 423.0
+theme_override_styles/panel = SubResource("InfoBox")
+
+[node name="NameLabel" type="Label" parent="Battle/PlayerInfo" unique_id=1249607469]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 14.0
+offset_right = 360.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_fonts/font = ExtResource("3_q2wej")
+theme_override_font_sizes/font_size = 29
+text = "YOU"
+
+[node name="HPBar" type="ProgressBar" parent="Battle/PlayerInfo" unique_id=770991939]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 63.0
+offset_right = 441.0
+offset_bottom = 86.0
+theme_override_styles/background = SubResource("HPBack")
+theme_override_styles/fill = SubResource("HPFill")
+value = 100.0
+show_percentage = false
+
+[node name="HPText" type="Label" parent="Battle/PlayerInfo" unique_id=163519646]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 58.0
+offset_right = 104.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0.9, 0.55, 0, 1)
+theme_override_fonts/font = ExtResource("3_q2wej")
+theme_override_font_sizes/font_size = 22
+text = "HP"
+
+[node name="HPLabel" type="Label" parent="Battle/PlayerInfo" unique_id=1048395518]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 90.0
+offset_right = 441.0
+offset_bottom = 126.0
+theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_fonts/font = ExtResource("3_q2wej")
+theme_override_font_sizes/font_size = 25
+text = "100 / 100"
+horizontal_alignment = 2
+
+[node name="BottomPanel" type="Panel" parent="Battle" unique_id=376583242]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 441.0
+offset_right = 1143.0
+offset_bottom = 639.0
+theme_override_styles/panel = SubResource("BottomBox")
+
+[node name="MessageBox" type="Panel" parent="Battle" unique_id=1175558188]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 454.0
+offset_right = 540.0
+offset_bottom = 626.0
+theme_override_styles/panel = SubResource("MessageStyle")
+
+[node name="MessageLabel" type="Label" parent="Battle/MessageBox" unique_id=1493159880]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 18.0
+offset_right = 495.0
+offset_bottom = 153.0
+theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_fonts/font = ExtResource("3_q2wej")
+theme_override_font_sizes/font_size = 29
+text = "What will you do?"
+autowrap_mode = 3
+
+[node name="Menu" type="Control" parent="Battle" unique_id=1626543754]
+anchors_preset = 0
+offset_right = 36.0
+offset_bottom = 36.0
+
+[node name="FightButton" type="Button" parent="Battle/Menu" unique_id=419821489]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 468.0
+offset_right = 837.0
+offset_bottom = 531.0
+theme_override_fonts/font = ExtResource("3_q2wej")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("FightStyle")
+theme_override_styles/pressed = SubResource("FightStyle")
+theme_override_styles/hover = SubResource("FightStyle")
+text = "Attack"
+
+[node name="BagButton" type="Button" parent="Battle/Menu" unique_id=1670843302]
+layout_mode = 0
+offset_left = 873.0
+offset_top = 468.0
+offset_right = 1116.0
+offset_bottom = 531.0
+theme_override_fonts/font = ExtResource("3_q2wej")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("BagStyle")
+theme_override_styles/pressed = SubResource("BagStyle")
+theme_override_styles/hover = SubResource("BagStyle")
+text = "Bag"
+
+[node name="FartButton" type="Button" parent="Battle/Menu" unique_id=2082006625]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 549.0
+offset_right = 837.0
+offset_bottom = 612.0
+theme_override_fonts/font = ExtResource("3_q2wej")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("PokeStyle")
+theme_override_styles/pressed = SubResource("PokeStyle")
+theme_override_styles/hover = SubResource("PokeStyle")
+disabled = true
+text = "fart
+"
+
+[node name="idkButton" type="Button" parent="Battle/Menu" unique_id=127249934]
+layout_mode = 0
+offset_left = 873.0
+offset_top = 549.0
+offset_right = 1116.0
+offset_bottom = 612.0
+theme_override_fonts/font = ExtResource("3_q2wej")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("RunStyle")
+theme_override_styles/pressed = SubResource("RunStyle")
+theme_override_styles/hover = SubResource("RunStyle")
+text = "idk
+"
+
+[node name="QuestionPanel" type="Panel" parent="Battle" unique_id=349341980]
+visible = false
+layout_mode = 0
+offset_left = 126.0
+offset_top = 54.0
+offset_right = 1026.0
+offset_bottom = 432.0
+theme_override_styles/panel = SubResource("InfoBox")
+
+[node name="QuestionLabel" type="Label" parent="Battle/QuestionPanel" unique_id=577029350]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 18.0
+offset_right = 873.0
+offset_bottom = 126.0
+theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_fonts/font = ExtResource("3_q2wej")
+theme_override_font_sizes/font_size = 29
+text = "Question"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="AnswerA" type="Button" parent="Battle/QuestionPanel" unique_id=1139190647]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 153.0
+offset_right = 432.0
+offset_bottom = 243.0
+theme_override_fonts/font = ExtResource("3_q2wej")
+theme_override_font_sizes/font_size = 25
+text = "Answer A"
+
+[node name="AnswerB" type="Button" parent="Battle/QuestionPanel" unique_id=877100870]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 153.0
+offset_right = 864.0
+offset_bottom = 243.0
+theme_override_fonts/font = ExtResource("3_q2wej")
+theme_override_font_sizes/font_size = 25
+text = "Answer B"
+
+[node name="AnswerC" type="Button" parent="Battle/QuestionPanel" unique_id=1632173427]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 261.0
+offset_right = 432.0
+offset_bottom = 351.0
+theme_override_fonts/font = ExtResource("3_q2wej")
+theme_override_font_sizes/font_size = 25
+text = "Answer C"
+
+[node name="AnswerD" type="Button" parent="Battle/QuestionPanel" unique_id=1814646874]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 261.0
+offset_right = 864.0
+offset_bottom = 351.0
+theme_override_fonts/font = ExtResource("3_q2wej")
+theme_override_font_sizes/font_size = 25
+text = "Answer D"
