@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://be5s17abbd8xk"]
 
 [ext_resource type="Script" uid="uid://dcpemeou1f6sf" path="res://Scripts/battle.gd" id="1_q4d3m"]
-[ext_resource type="Texture2D" uid="uid://ind0ddxlncn4" path="res://icon.svg" id="2_uwcqa"]
 [ext_resource type="FontFile" uid="uid://dyr2wead6axtj" path="res://Fonts/Minecraft.ttf" id="3_tvnri"]
+[ext_resource type="Texture2D" uid="uid://c2t3y3tybwoa3" path="res://Characters/lokke_open.png" id="enemy_open"]
+[ext_resource type="Texture2D" uid="uid://oe5apnkdsua6" path="res://Characters/lokke.png" id="enemy_tex"]
+[ext_resource type="Texture2D" uid="uid://b5v8cc5uet33m" path="res://Characters/player.png" id="player_tex"]
 
 [sub_resource type="StyleBoxFlat" id="InfoBox"]
 bg_color = Color(0.93, 0.93, 0.9, 1)
@@ -96,6 +98,8 @@ anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 script = ExtResource("1_q4d3m")
+level = 2
+enemy_open_mouth = ExtResource("enemy_open")
 
 [node name="Background" type="ColorRect" parent="Battle" unique_id=405631814]
 layout_mode = 0
@@ -121,22 +125,22 @@ color = Color(0.35, 0.7, 0.4, 1)
 
 [node name="EnemySprite" type="TextureRect" parent="Battle" unique_id=824358510]
 layout_mode = 0
-offset_left = 774.0
-offset_top = 54.0
-offset_right = 954.0
+offset_left = 747.0
+offset_right = 981.0
 offset_bottom = 234.0
-texture = ExtResource("2_uwcqa")
+texture = ExtResource("enemy_tex")
 expand_mode = 1
+stretch_mode = 5
 
 [node name="PlayerSprite" type="TextureRect" parent="Battle" unique_id=56022637]
 layout_mode = 0
-offset_left = 144.0
-offset_top = 207.0
-offset_right = 378.0
+offset_left = 109.0
+offset_top = 137.0
+offset_right = 413.0
 offset_bottom = 441.0
-texture = ExtResource("2_uwcqa")
+texture = ExtResource("player_tex")
 expand_mode = 1
-flip_h = true
+stretch_mode = 5
 
 [node name="EnemyInfo" type="Panel" parent="Battle" unique_id=1011323840]
 layout_mode = 0
@@ -199,7 +203,7 @@ offset_bottom = 50.0
 theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
 theme_override_fonts/font = ExtResource("3_tvnri")
 theme_override_font_sizes/font_size = 25
-text = "200 / 200"
+text = "100 / 100"
 horizontal_alignment = 2
 
 [node name="PlayerInfo" type="Panel" parent="Battle" unique_id=1869732213]
