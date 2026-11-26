@@ -1,7 +1,7 @@
 extends Control
 class_name LevelSelect
 
-@onready var current_level: LevelIcon = $LevelIcon
+@onready var current_level: LevelIcon = $"1"
 var current_world: int = 0
 
 
