@@ -50,7 +50,7 @@ offset_top = 320.0
 offset_right = 640.0
 offset_bottom = 384.0
 Level_name = " 4"
-next_scene_path = null
+next_scene_path = "uid://c6pg8hp0507gc"
 next_level_up = NodePath("../5")
 next_level_down = NodePath("../6")
 next_level_left = NodePath("../3")
@@ -62,7 +62,7 @@ offset_top = 448.0
 offset_right = 832.0
 offset_bottom = 512.0
 Level_name = " 6"
-next_scene_path = null
+next_scene_path = "uid://ce068pkdphxjk"
 next_level_left = NodePath("../4")
 next_level_right = NodePath("../7")
 
@@ -73,7 +73,7 @@ offset_top = 184.0
 offset_right = 832.0
 offset_bottom = 248.0
 Level_name = " 5"
-next_scene_path = null
+next_scene_path = "uid://bj0o6ryp4b6b"
 next_level_left = NodePath("../4")
 next_level_right = NodePath("../7")
 
