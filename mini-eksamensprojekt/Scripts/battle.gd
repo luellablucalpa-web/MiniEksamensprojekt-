@@ -84,3 +84,8 @@ func enemy_turn():
 	else:
 		$MessageBox/MessageLabel.text = "WHAT ARE YOU GONNA DO NOW"
 		$Menu.show()
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://Scenes/level_select/level_select.tscn")
+		
+		

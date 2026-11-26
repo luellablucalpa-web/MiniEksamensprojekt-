@@ -18,6 +18,7 @@ layout_mode = 0
 offset_top = 384.0
 offset_bottom = 448.0
 Level_name = " 1"
+next_scene_path = "uid://rtoyswf5xqtv"
 next_level_right = NodePath("../2")
 
 [node name="2" parent="." unique_id=13977568 node_paths=PackedStringArray("next_level_up", "next_level_left", "next_level_right") instance=ExtResource("1_u2ran")]
@@ -27,6 +28,7 @@ offset_top = 320.0
 offset_right = 256.0
 offset_bottom = 384.0
 Level_name = " 2"
+next_scene_path = "uid://be5s17abbd8xk"
 next_level_up = NodePath("../2B")
 next_level_left = NodePath("../1")
 next_level_right = NodePath("../3")
@@ -38,6 +40,7 @@ offset_top = 128.0
 offset_right = 256.0
 offset_bottom = 192.0
 Level_name = " 2B"
+next_scene_path = null
 next_level_down = NodePath("../2")
 
 [node name="4" parent="." unique_id=651139862 node_paths=PackedStringArray("next_level_up", "next_level_down", "next_level_left") instance=ExtResource("1_u2ran")]
@@ -47,6 +50,7 @@ offset_top = 320.0
 offset_right = 640.0
 offset_bottom = 384.0
 Level_name = " 4"
+next_scene_path = null
 next_level_up = NodePath("../5")
 next_level_down = NodePath("../6")
 next_level_left = NodePath("../3")
@@ -58,6 +62,7 @@ offset_top = 448.0
 offset_right = 832.0
 offset_bottom = 512.0
 Level_name = " 6"
+next_scene_path = null
 next_level_left = NodePath("../4")
 next_level_right = NodePath("../7")
 
@@ -68,6 +73,7 @@ offset_top = 184.0
 offset_right = 832.0
 offset_bottom = 248.0
 Level_name = " 5"
+next_scene_path = null
 next_level_left = NodePath("../4")
 next_level_right = NodePath("../7")
 
@@ -78,6 +84,7 @@ offset_top = 320.0
 offset_right = 960.0
 offset_bottom = 384.0
 Level_name = " 7"
+next_scene_path = null
 next_level_up = NodePath("../5")
 next_level_down = NodePath("../6")
 
@@ -88,6 +95,7 @@ offset_top = 384.0
 offset_right = 448.0
 offset_bottom = 448.0
 Level_name = " 3"
+next_scene_path = "uid://dbm7mm301efe2"
 next_level_left = NodePath("../2")
 next_level_right = NodePath("../4")
 
